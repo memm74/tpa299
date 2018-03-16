@@ -3,6 +3,10 @@ names(pa299) <- c("Name", "Episode", "Title", "Guests", "Date", "Length", "QA")
 
 pa299$Date <- as.Date(pa299$Date)
 
+minutes <- sum(pa299$Length)
+minutes/60
+minutes/60/24
+
 library(ggplot2)
 p1 <- ggplot(pa299, aes(x=Date, y=Length)) + geom_point()
 
